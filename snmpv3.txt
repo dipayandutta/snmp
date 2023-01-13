@@ -1,0 +1,10 @@
+
+
+#SNMP V3 User creation
+net-snmp-config --create-snmpv3-user -a MD5 -A geek123 geekuser
+
+
+# SNMPWALK for v3 user
+snmpwalk -v3 -u dipayan -l authNoPriv -a MD5 -A nodeMachine -c public 192.168.56.111
+
+
